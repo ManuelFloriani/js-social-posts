@@ -63,7 +63,7 @@ const posts = [
 ];
 
 let container = document.getElementById("container");
-let likeButton = document.querySelector('.like-button');
+
 
 // Creazione posts in pagina
 posts.forEach((element) => {
@@ -100,10 +100,10 @@ posts.forEach((element) => {
 })
 
 // likeButtonColor();
-
+let likeButton = document.querySelectorAll('like-button');
 
 // Creazione funzione cambio colore like
 
-likeButton.addEventListener('click', function (){
-    likeButton.classList.add('.liked');
+likeButton.addEventListener('click', function(){
+    likeButton.style.color = 'green';
 });
