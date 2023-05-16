@@ -100,7 +100,7 @@ posts.forEach((element) => {
 })
 
 // likeButtonColor();
-let likeButton = document.querySelectorAll('like-button');
+let likeButton = document.getElementsByClassName('like-button');
 
 // Creazione funzione cambio colore like
 
