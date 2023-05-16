@@ -92,20 +92,28 @@ posts.forEach((element) => {
                 </a>
             </div>
             <div class="likes__counter">
-                Piace a <b id="like-counter-1" class="js-likes-counter">${element.likes}</b> persone
+                Piace a <b class="js-likes-counter like-counter-1">${element.likes}</b> persone
             </div>
         </div> 
     </div>            
 </div>`
 })
 
+let likeCounter = document.querySelectorAll(".like-counter-1");
+let {likes} = posts;
+
 // likeButtonColor();
-let likeButton = document.getElementsByClassName('like-button');
+let likeButtons = document.querySelectorAll('.like-button');
 
-likeButton.forEach(element => {
+console.log(likeButtons);
 
+likeButtons.forEach(element => {
+    
     element.addEventListener('click', function(){
         element.style.color = 'green';
+        likes++;
+        likeCounter.innerHTML = likes;
+
     });
     
 });
@@ -113,3 +121,9 @@ likeButton.forEach(element => {
 
 // Creazione funzione cambio colore like
 
+let numCount = 68
+let count = document.querySelector('.count')
+function addLike () {
+    numCount ++
+    count.innerText = numCount
+}
