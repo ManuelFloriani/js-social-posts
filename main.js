@@ -102,8 +102,14 @@ posts.forEach((element) => {
 // likeButtonColor();
 let likeButton = document.getElementsByClassName('like-button');
 
+likeButton.forEach(element => {
+
+    element.addEventListener('click', function(){
+        element.style.color = 'green';
+    });
+    
+});
+
+
 // Creazione funzione cambio colore like
 
-likeButton.addEventListener('click', function(){
-    likeButton.style.color = 'green';
-});
